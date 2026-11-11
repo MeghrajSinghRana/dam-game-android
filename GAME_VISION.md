@@ -20,11 +20,14 @@ The following is the user's original brief, saved verbatim for future reference.
 
 - Tapping earns coins.
 - Pumps only remove water from the dam; they do not generate coins.
-- Any upgrade that increases coins per tap is purchased with coins earned by tapping (and any other coin source the player explicitly approves later).
-- Target run length: a strong run may last roughly 50–100 hours; the player should generally feel capable, with occasional severe weather spikes that create tense recovery moments.
+- The player increases coins per tap by buying tap-strength upgrades with coins earned by tapping. The upgrade is represented by a visible village worksite or tool improvement, so increasing tap output feels part of the world.
 - No coins are earned without tapping.
+- Target run length: a strong run may last roughly 50–100 hours; the player should generally feel capable, with occasional severe weather spikes that create tense recovery moments.
 - Rain, flooding, pump operation, and village damage should use natural-feeling visual and sound feedback. Village damage should also be clear through a health bar and visual changes.
 - Pump upgrades increase the pump's water-draining power.
 - Initial ad concept: a periodic offer (about every 2–3 minutes) to watch a rewarded ad for extra coins. Keep the ad optional and give the reward only after the ad is completed.
+- The original ad ideas—village-health recovery and a free pump level—remain possible future rewarded-ad options, but are not part of the first monetization implementation.
 - Additional gameplay and monetization mechanics can be considered after the core loop is playable.
 - The game uses landscape orientation.
+- We will make the 3D assets ourselves, with smooth rounded shapes and simple coloured materials; no purchased art assets or detailed textures are required.
+- The target is a studio-quality presentation, achieved through coherent art direction, responsive effects, clear UI, sound, and reliable mobile performance.
