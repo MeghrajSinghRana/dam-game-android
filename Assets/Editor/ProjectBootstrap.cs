@@ -1,5 +1,6 @@
 using System.IO;
 using UnityEditor;
+using UnityEditor.Build;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 
@@ -27,7 +28,7 @@ namespace DamGame.Editor
             PlayerSettings.allowedAutorotateToLandscapeRight = true;
             PlayerSettings.allowedAutorotateToPortrait = false;
             PlayerSettings.allowedAutorotateToPortraitUpsideDown = false;
-            PlayerSettings.SetApplicationIdentifier(BuildTargetGroup.Android, "com.meghrajsinghrana.savethevillage");
+            PlayerSettings.SetApplicationIdentifier(NamedBuildTarget.Android, "com.meghrajsinghrana.savethevillage");
             PlayerSettings.Android.targetSdkVersion = AndroidSdkVersions.AndroidApiLevelAuto;
 
             EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTargetGroup.Android, BuildTarget.Android);
