@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 namespace DamGame.Runtime
@@ -69,7 +70,9 @@ namespace DamGame.Runtime
 
         private void Update()
         {
-            if (Pointer.current != null && Pointer.current.press.wasPressedThisFrame)
+            if (Pointer.current != null
+                && Pointer.current.press.wasPressedThisFrame
+                && (EventSystem.current == null || !EventSystem.current.IsPointerOverGameObject(Pointer.current.deviceId)))
             {
                 Coins += TapStrength;
                 StateChanged?.Invoke();
