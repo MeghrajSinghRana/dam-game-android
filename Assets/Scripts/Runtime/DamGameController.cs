@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace DamGame.Runtime
 {
@@ -68,7 +69,7 @@ namespace DamGame.Runtime
 
         private void Update()
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Pointer.current != null && Pointer.current.press.wasPressedThisFrame)
             {
                 Coins += TapStrength;
                 StateChanged?.Invoke();
