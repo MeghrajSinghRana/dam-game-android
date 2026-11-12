@@ -105,8 +105,8 @@ namespace DamGame.Runtime
             pumpText.text = $"PUMPS  {game.PumpCount}/4     DRAIN  {game.TotalDrainRate:0.00}/s";
             waterText.text = $"WATER  {game.WaterLevel:0}%";
             healthText.text = $"HEALTH  {game.VillageHealth:0}%";
-            waterFill.fillAmount = game.WaterLevel / 125f;
-            healthFill.fillAmount = game.VillageHealth / 100f;
+            SetMeter(waterFill, game.WaterLevel / 100f);
+            SetMeter(healthFill, game.VillageHealth / 100f);
 
             pumpButtonText.text = game.AllPumpsInstalled
                 ? $"UPGRADE PUMPS   {game.PumpUpgradeCost:N0}"
@@ -166,11 +166,13 @@ namespace DamGame.Runtime
             fill.offsetMax = Vector2.zero;
             var image = fill.gameObject.AddComponent<Image>();
             image.color = fillColor;
-            image.type = Image.Type.Filled;
-            image.fillMethod = Image.FillMethod.Horizontal;
-            image.fillAmount = 1f;
             image.raycastTarget = false;
             return image;
+        }
+
+        private static void SetMeter(Image image, float value)
+        {
+            image.rectTransform.anchorMax = new Vector2(Mathf.Clamp01(value), 1f);
         }
 
         private Button CreateButton(RectTransform parent, Vector2 position, Vector2 size, out Text label)

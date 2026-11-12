@@ -31,3 +31,4 @@ The following is the user's original brief, saved verbatim for future reference.
 - The game uses landscape orientation.
 - We will make the 3D assets ourselves, with smooth rounded shapes and simple coloured materials; no purchased art assets or detailed textures are required.
 - The target is a studio-quality presentation, achieved through coherent art direction, responsive effects, clear UI, sound, and reliable mobile performance.
+- Art reference: the stylized low-poly assets shown at https://itch.io/game-assets/free/tag-low-poly, particularly the colorful, cohesive village and nature examples. Use simple, readable forms, gently rounded edges, intentional geometric detail, and a coordinated palette. Create original assets in this spirit.
